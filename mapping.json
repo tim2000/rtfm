@@ -1,0 +1,112 @@
+{
+    "mapping": [
+        {
+            "name": "Porte",
+            "channel": 12,
+            "note": 60,
+            "group": "Environnement"
+        },
+        {
+            "name": "Dragon",
+            "channel": 12,
+            "note": 61,
+            "group": "Monstre"
+        },
+        {
+            "name": "Coffre avec clé",
+            "channel": 12,
+            "note": 62,
+            "group": "Environnement"
+        },
+        {
+            "name": "Big Bebete Grr",
+            "channel": 12,
+            "note": 63,
+            "group": "Monstre"
+        },
+        {
+            "name": "Coffre",
+            "channel": 12,
+            "note": 64,
+            "group": "Environnement"
+        },
+        {
+            "name": "Arbalète",
+            "channel": 12,
+            "note": 65,
+            "group": "Combat"
+        },
+        {
+            "name": "Gnoll",
+            "channel": 12,
+            "note": 66,
+            "group": "Monstre"
+        },
+        {
+            "name": "Epée",
+            "channel": 12,
+            "note": 67,
+            "group": "Combat"
+        },
+        {
+            "name": "EMERGENCY STOP",
+            "channel": 12,
+            "cc": 67,
+            "group": "Admin"
+        },
+        {
+            "name": "Teleport",
+            "channel": 12,
+            "note": 80,
+            "group":"Combat"
+        },
+        {
+            "name": "Epic Fail",
+            "channel": 12,
+            "note": 72,
+            "group":"Evénement"
+        },        
+        {
+            "name": "Donjon",
+            "channel": 12,
+            "note": 74,
+            "group":"Ambiances"
+        },        
+        {
+            "name": "Aile de dragon",
+            "channel": 12,
+            "note": 73,
+            "group":"Monstre"
+        },      
+        {
+            "name": "Grosse pluie",
+            "channel": 12,
+            "note": 75,
+            "group":"Ambiances"
+        },
+        {
+            "name": "Forêt",
+            "channel": 12,
+            "note": 76,
+            "group":"Ambiances"
+        },
+        {
+            "name": "Cave",
+            "channel": 12,
+            "note": 77,
+            "group":"Ambiances"
+        },
+        {
+            "name": "Trompettes du Roi",
+            "channel": 12,
+            "note": 78,
+            "group":"Evénement"
+        },
+        {
+            "name": "Village",
+            "channel": 12,
+            "note": 79,
+            "group":"Ambiances"
+        }
+    ]
+}
