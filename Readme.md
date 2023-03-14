@@ -9,8 +9,8 @@ This page is filled with buttons and allow anyone to trigger sound samples or am
 ## Basic design 
 
 RTFM have two main components:
-    - WebServer => Handle the displayu of the webpage and the HTTP requests
-    - MidiDevice => Mount a virtual MIDI device, which can send Notes and CC events
+1. WebServer => Handle the displayu of the webpage and the HTTP requests
+2. MidiDevice => Mount a virtual MIDI device, which can send Notes and CC events
 
 When the WebServer receives HTTP Post events, it parses it to know what button is being pushed. The event is translated into Midi.
 
