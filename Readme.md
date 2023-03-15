@@ -23,7 +23,7 @@ RTFM requires both mido and pytemidi. They are both retrievable using pip.
 I use Python 3.9 - other versions are untested (but any Python3 should work)
 
 You need to prepare a DAW or similar that will listen the MIDI device and play the sounds. 
-I personally use Bitwig with and a DrumRack. The ampping.json is mine, and will need to be customized. 
+I personally use Bitwig with a DrumRack. The file mapping.json is an exemple of mine, this needs to be customized for your setup. 
 
 
 ## TODO
@@ -32,6 +32,7 @@ I personally use Bitwig with and a DrumRack. The ampping.json is mine, and will 
 1. Implement players.json where you can defined access rights by character
 2. Background music player - Like samples, but with On/Off capabilities - and a tracking of the curently playing musics
 3. Auto-update Bitwig DrumRack from sample files contains in a directory (ease the curently - manualy done - required steps)
+4. Global config (http port to be used, spam filter time, ...)
 ### WebSever Improvments
 1. Implement HTML Filter by group
 2. Improve CSS
