@@ -2,10 +2,11 @@ from http.server import BaseHTTPRequestHandler
 import mididevice
 import cgi
 import sounds
+import spamfilter
 
-
+# TODO - This should be class member
 MIDI_DEVICE = mididevice.MidoDevice()
-
+SPAM_FILER = spamfilter.SpamFilter(1)
 
 class RtfmServer(BaseHTTPRequestHandler):
     def do_GET(self):
@@ -16,6 +17,7 @@ class RtfmServer(BaseHTTPRequestHandler):
             environ={'REQUEST_METHOD': 'GET',
                      'CONTENT_TYPE': self.headers['Content-Type'], })
         
+        print(self.client_address[0])
         print(self.path)
         if self.path.endswith("mystyle.css"):
             with open("mystyle.css", 'r') as css_file:
@@ -31,7 +33,7 @@ class RtfmServer(BaseHTTPRequestHandler):
             self.send_response(200)
             self.send_header("Content-type", "text/html")
             self.end_headers()
-            # Todo: html_generator
+            # TODO - html_generator.py
             self.wfile.write(bytes("<meta charset=\"UTF-8\">", "utf-8"))
             self.wfile.write(bytes("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">", "utf-8"))
             self.wfile.write(bytes("<html><head><title>D&D MusicBox</title></head>", "utf-8"))
@@ -68,6 +70,9 @@ class RtfmServer(BaseHTTPRequestHandler):
             environ={'REQUEST_METHOD': 'POST',
                      'CONTENT_TYPE': self.headers['Content-Type'], })
 
+        print("POST : " + str(self.client_address))
+
+        
         # check path
         if self.path.endswith('/api/rtfm'):
             # Command callbacks
@@ -75,6 +80,11 @@ class RtfmServer(BaseHTTPRequestHandler):
             if sound is not None:
                 print(sound)
                 name, channel, note, cc, group = sounds.get_sound_info(sound)
+
+                # TODO - SpamFilter config to allow any group to bypass it
+                if group != 'Admin' and not SPAM_FILER.is_authorized(self.client_address[0]):
+                    print("SPAM ALERT: " + str(self.client_address))
+                    return
                 
                 if note is not None:
                     MIDI_DEVICE.send_note_on_off(channel, note)

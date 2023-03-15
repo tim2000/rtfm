@@ -59,6 +59,18 @@
             "channel": 12,
             "note": 80,
             "group":"Combat"
+        },        
+        {
+            "name": "Zelda Win",
+            "channel": 12,
+            "note": 81,
+            "group":"Evénement"
+        },
+        {
+            "name": "Leeroy Jenkins",
+            "channel": 12,
+            "note": 82,
+            "group":"Combat"
         },
         {
             "name": "Epic Fail",

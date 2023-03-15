@@ -9,7 +9,7 @@ This page is filled with buttons and allow anyone to trigger sound samples or am
 ## Basic design 
 
 RTFM have two main components:
-1. WebServer => Handle the displayu of the webpage and the HTTP requests
+1. WebServer => Handle the HTML/CSS webpage and the HTTP requests
 2. MidiDevice => Mount a virtual MIDI device, which can send Notes and CC events
 
 When the WebServer receives HTTP Post events, it parses it to know what button is being pushed. The event is translated into Midi.
@@ -28,8 +28,12 @@ I personally use Bitwig with and a DrumRack. The ampping.json is mine, and will 
 
 ## TODO
 
-- Implement HTML Filter by group
-- Improve CSS
-- Implement players.json where you can defined access rights by character
-- Background music player - Like samples, but with On/Off capabilities - and a tracking of the curently playing musics
-- Auto-update Bitwig DrumRack from sample files contains in a directory (ease the curently - manualy done - required steps)
+### New Features
+1. Implement players.json where you can defined access rights by character
+2. Background music player - Like samples, but with On/Off capabilities - and a tracking of the curently playing musics
+3. Auto-update Bitwig DrumRack from sample files contains in a directory (ease the curently - manualy done - required steps)
+### WebSever Improvments
+1. Implement HTML Filter by group
+2. Improve CSS
+### MidiDevice Improvments
+1. Notes and CC only send one event (curently we do ON/sleep/OFF with fixed value for the CC)
