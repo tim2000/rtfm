@@ -3,9 +3,10 @@ import time
 DEFAULT_TIMEOUT_SEC = 2
 
 class SpamFilter:
-    def __init__(self, filter_time_sec = DEFAULT_TIMEOUT_SEC) -> None:
+    def __init__(self, filter_time_sec = DEFAULT_TIMEOUT_SEC, excluded_groups = ["Admin"]) -> None:
         self.clients = dict()
         self.filter_time_sec = filter_time_sec
+        self.excluded_groups = excluded_groups
     
 
     def is_authorized(self, client_addr):
@@ -21,4 +22,11 @@ class SpamFilter:
             print(str(diff))
             return False
 
+        return True
+    
+
+    def should_apply_filter(self, group):
+        if group in self.excluded_groups:
+            return False
+        
         return True

@@ -14,8 +14,8 @@ RTFM have two main components:
 
 When the WebServer receives HTTP Post events, it parses it to know what button is being pushed. The event is translated into Midi.
 
-The MIDI mapping of each sounds is described in mapping.json where you can select if the sound is trigger using a notes on/off event or a CC. You can also specify the MIDI channel to use. 
-You can also the "group" field in mapping.json to improve the HTML page, which is quickly required if you have more than 10 semples. 
+The MIDI mapping of each sounds is described in mapping.json where you can select if the sound will be triggered using a notes on/off event or a CC. You can also specify the MIDI channel to use. 
+You can also use the "group" field in mapping.json to improve the HTML page, which is quickly required if you have more than 10 samples. 
 
 ## Use
 
